@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       Greeting: Salut ## Variable d'environnement pour la tâche
+      SECRET_VAR: ${{ env1.SERCRET_VAR }}
+      VAR1: ${{ env1.VAR1 }}
     steps:
       - name: "Dites Salut Mona nous sommes lundi"
         run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK! $SECRET_VAR $VAR1"
