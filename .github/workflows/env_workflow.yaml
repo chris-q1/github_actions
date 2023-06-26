@@ -12,6 +12,6 @@ jobs:
       Greeting: Salut ## Variable d'environnement pour la tâche
     steps:
       - name: "Dites Salut Mona nous sommes lundi"
-        run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK! ${{ env1.SERCRET_VAR }} |  ${{ env1.VAR1 }}"
+        run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK! ${{ secrets.SERCRET_VAR }} |  ${{ vars.VAR1 }}"
         env:
           First_Name: Mona ## Variable d'environnement uniquement pour l'étape "Dites Salut Mona nous sommes 
