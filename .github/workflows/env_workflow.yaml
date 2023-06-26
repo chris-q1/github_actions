@@ -12,8 +12,9 @@ jobs:
       Greeting: Salut ## Variable d'environnement pour la tâche
       SV: ${{ secrets.SERCRET_VAR }}
       V1: ${{ vars.VAR1 }}
+      V2: fasss
     steps:
       - name: "Dites Salut Mona nous sommes lundi"
-        run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK! $SV |  $V1"
+        run: echo "$Greeting $First_Name. Nous sommes $DAY_OF_WEEK! $SV |  $V1 | $V2"
         env:
           First_Name: Mona ## Variable d'environnement uniquement pour l'étape "Dites Salut Mona nous sommes 
